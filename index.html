@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Country Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light" id="nav">
+        <a class="navbar-brand pl-3" href="#">Country Guide</a>
+    </nav>
+    <div class="alert alert-success alert-dismissible fade show hide" role="alert" id="alert">
+        <p id="response">India</p>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close" onclick="close(this)">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="container text-center">
+        <div class="jumbotron">
+            <h1>Know about your country</h1>
+            <form onsubmit="return process('countrySearch')">
+                <div class="form-group">
+                    <input type="text" id="countrySearch">
+                </div>
+                <button type="submit" class="btn btn-primary">Get detail</button>
+            </form>
+        </div>
+    </div>
+    <h3 class="text-center mb-5">Enter Country name and hit to Get detail</h3>
+    <div class="container p-5 hide" style="background: #d9f6d6" id="result">
+        <div class="card mb-3" style="background: #d9f6d6">
+            <img class="card-img-top h-100 w-100" src="#" id="flag" aria-label="Country flag">
+            <div class="card-body text-center">
+                <h4 class="card-title green" id="country"></h4>
+                <p class="green">Capital: <span class="blue" id="capital"></span></p>
+                <p class="green">Region: <span class="blue" id="region"></span></p>
+                <p class="green">Subregion: <span class="blue" id="subregion"></span></p>
+                <p class="green">Population: <span class="blue" id="population"></span></p>
+                <p class="green">Time Zones: <span class="blue" id="timezones"></span></p>
+                <p class="green">Native Name: <span class="blue" id="nativename"></span></p>
+                <p class="green">Currency: <span class="blue" id="currency"></span></p>
+                <p class="green">Languages: <span class="blue" id="languages"></span></p>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
